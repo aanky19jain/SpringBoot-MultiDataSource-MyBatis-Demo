@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multidatasource.mapper.QueryMapper">
+
+	<select id="getWorkBookById" resultType="com.multidatasource.model.WorkBook">
+		SELECT * 
+		FROM MDO_WORKBOOK 
+		WHERE workbookId = #{workbookId}
+	</select>
+	
+	<select id="getEmployeeById" resultType="com.multidatasource.model.Employee">
+		SELECT * 
+		FROM employee 
+		WHERE id = #{employeeId}
+	</select>
+	
+	<select id="getCityById" resultType="com.multidatasource.model.City">
+		SELECT *  
+		FROM cities 
+		WHERE id = #{cityId}
+	</select>
+	
+</mapper>

@@ -1,0 +1,29 @@
+server:
+  port: 5050
+spring:
+  application:
+    name: Multi-DataSource-MyBatis-Demo
+  cloud:
+      gcp:
+          sql:
+            database-name: # cloud sql database name
+            instance-connection-name: # cloud sql instance connection name
+  datasource:
+    upm-dev:
+      jdbc-url: jdbc:postgresql://localhost:2226/upm-dev
+      username: postgres
+      password: #password
+    employees:
+      jdbc-url: jdbc:postgresql://localhost:5432/employees
+      username: postgres
+      password: #password
+    cities:
+      jdbc-url: jdbc:postgresql://localhost:5432/b008967
+      username: postgres
+      password: #password
+
+# Client Tokens configuration      
+clientTokens:
+  iwantupmdevdatabase: 1
+  iwantemployeedatabase: 2
+  iwantcitiesdatabase: 3
