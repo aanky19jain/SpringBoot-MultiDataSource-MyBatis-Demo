@@ -6,21 +6,21 @@ spring:
   cloud:
       gcp:
           sql:
-            database-name: # cloud sql database name
-            instance-connection-name: # cloud sql instance connection name
+            database-name: upm-dev
+            instance-connection-name: mtech-commonsvc-pricepromo-np:us-central1:price-upm
   datasource:
     upm-dev:
       jdbc-url: jdbc:postgresql://localhost:2226/upm-dev
       username: postgres
-      password: #password
+      password: spannermigration
     employees:
       jdbc-url: jdbc:postgresql://localhost:5432/employees
       username: postgres
-      password: #password
+      password: postgres
     cities:
       jdbc-url: jdbc:postgresql://localhost:5432/b008967
       username: postgres
-      password: #password
+      password: postgres
 
 # Client Tokens configuration      
 clientTokens:
